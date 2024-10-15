@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ademozalp.hibernate.HibernateApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-10T16:10:00" hostname="Adems-MacBook-Air.local" time="0.308">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.ademozalp.hibernate.HibernateApplicationTests" time="0.308"/>
+  <system-out><![CDATA[19:09:58.870 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ademozalp.hibernate.HibernateApplicationTests]: HibernateApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:09:58.914 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ademozalp.hibernate.HibernateApplication for test class com.ademozalp.hibernate.HibernateApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-10T19:09:59.088+03:00 DEBUG 10247 --- [hibernate] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@378bd86d
+2024-10-10T19:10:00.702+03:00 DEBUG 10247 --- [hibernate] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-10-10T19:10:00.764+03:00 DEBUG 10247 --- [hibernate] [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-10T19:10:00.780+03:00 DEBUG 10247 --- [hibernate] [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-10T19:10:00.795+03:00 DEBUG 10247 --- [hibernate] [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-10T19:10:00.879+03:00 ERROR 10247 --- [hibernate] [    Test worker] c.a.hibernate.HibernateApplication       : category: 112c7a5c-6283-499e-8683-58076e79b296
+2024-10-10T19:10:00.880+03:00 ERROR 10247 --- [hibernate] [    Test worker] c.a.hibernate.HibernateApplication       : category: 112c7a5c-6283-499e-8683-58076e79b296
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/ademozalp/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
