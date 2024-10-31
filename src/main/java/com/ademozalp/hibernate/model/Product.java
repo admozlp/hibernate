@@ -1,11 +1,11 @@
 package com.ademozalp.hibernate.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
@@ -15,7 +15,13 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Product extends BaseEntity {
+//@org.hibernate.annotations.Cache(region = "products", usage = CacheConcurrencyStrategy.READ_WRITE)
+public class Product implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(length = 100)
+    private String id;
+
     private BigDecimal price;
 
     @Embedded
@@ -28,6 +34,6 @@ public class Product extends BaseEntity {
 
     private Integer stock;
 
-    @Version
-    private Integer version;
+//    @Version
+//    private Integer version;
 }

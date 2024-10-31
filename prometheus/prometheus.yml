@@ -3,8 +3,8 @@ global:
 
 scrape_configs:
   - job_name: 'spring_actuator'
-    metrics_path: '/actuator/prometheus'
+    metrics_path: '/apigw/actuator/prometheus'
     scrape_interval: 5s
     scheme: https
     static_configs:
-      - targets: ['a84a-213-14-146-110.ngrok-free.app']
+      - targets: ['molatest.bulvia.com']

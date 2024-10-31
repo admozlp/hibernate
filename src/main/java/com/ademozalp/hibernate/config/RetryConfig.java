@@ -35,7 +35,7 @@ public class RetryConfig {
 
             @Override
             public <T, E extends Throwable> boolean open(RetryContext context, RetryCallback<T, E> callback) {
-                log.info("Deneme başladı oldu: {}", context.getRetryCount());
+                log.info("Deneme başladı : {}", context.getRetryCount());
 
                 return RetryListener.super.open(context, callback);
             }
@@ -55,7 +55,7 @@ public class RetryConfig {
 
             @Override
             public <T, E extends Throwable> void close(RetryContext context, RetryCallback<T, E> callback, Throwable throwable) {
-                log.info("Deneme sayısı bitti oldu: {}", context.getRetryCount());
+                log.info("Deneme sayısı bitti : {}", context.getRetryCount());
 
                 RetryListener.super.close(context, callback, throwable);
             }
