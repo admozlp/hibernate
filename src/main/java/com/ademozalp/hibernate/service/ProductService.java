@@ -74,8 +74,7 @@ public class ProductService {
     @Transactional
     @Retryable(retryFor = RuntimeException.class, maxAttempts = 2, backoff = @Backoff(delay = 1000))
     public Product incrementStock() {
-        Product product = repository.findByDetailName("Laptop1")
-                .orElseThrow(() -> new EntityNotFoundException("Product not found: Laptop"));
+        Product product = repository.findAll().getFirst();
 
         product.setStock(product.getStock() + 1);
         return repository.save(product);

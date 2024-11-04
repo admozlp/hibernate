@@ -11,7 +11,7 @@ import org.springframework.retry.annotation.EnableRetry;
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableRetry
-@EnableCaching
+//@EnableCaching
 public class HibernateApplication {
 
     public static void main(String[] args) {

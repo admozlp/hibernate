@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.RelationTargetAuditMode;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -16,6 +18,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Builder
 //@org.hibernate.annotations.Cache(region = "products", usage = CacheConcurrencyStrategy.READ_WRITE)
+@Audited
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
